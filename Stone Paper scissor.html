@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <script src="jquery-3.7.1.min.js"></script>
+    <title>Stone Paper Scissor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            
+            /* box-sizing: border-box; */
+            text-transform: capitalize;
+            
+        }
+        
+        .container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .GameArea{
+            height: 75%;
+            width: 100%;
+            border: 2px solid black;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .box{
+            height: 150px;
+            width: 150px;
+            border: 2px solid black;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .scale:hover{
+            scale: 1.05;
+            
+        }
+        .com{
+            position: absolute;
+            border: none;
+        }
+        .result{
+            height: 300px;
+            width: 250px;
+            display: flex;
+            font-size: 25px;
+            justify-content: center;
+            align-items: end;
+        }
+        
+        .scoreArea{
+            height: 25%;
+            width: 100%;
+            border: 2px solid black;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .btn{
+            height: 60px;
+            width: 100px;
+            position: absolute;
+            border: 2px solid black;
+            border-radius: 5px;
+            font-size: 25px;
+            background: linear-gradient(rgb(187, 255, 0) ,rgb(23, 208, 23));
+            font-weight: bold;
+            left: 5px;
+            top: 5px;
+        }
+        h1{
+            width: 100%;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 4px 4px 2px gray;
+        }
+        </style>
+</head>
+
+<body>
+    <button class="btn" onclick="">restart</button>
+    <div class="container">
+        <div class="GameArea">
+            <div class="box computer">
+                <div class=" box com animate" id="crock"><img src="rock.jpg" alt="" height="150px" width="150px"></div>
+                <div class=" box com animate" id="cscissor"><img src="scissor.jpg" alt="" height="150px" width="150px"></div>
+                <div class=" box com animate" id="cpaper"><img src="paper.png" alt="" height="150px" width="150px"></div>
+            </div>
+            <div class="result"><h1> Stone Paper scissor
+            </h1></div>
+            <div class="box user">
+                <div class=" box com " id="urock"><img src="rock.jpg" alt="" height="150px" width="150px"></div>
+                <div class=" box com " id="upaper"><img src="paper.png" alt="" height="150px" width="150px"></div>
+                <div class=" box com " id="uscissor"><img src="scissor.jpg" alt="" height="150px" width="150px"></div>
+            </div>
+            <div class="boxes">
+                <div class=" box " id="rock"><img src="rock.jpg" alt="" height="150px" width="150px" class="scale"></div>
+                <div class=" box " id="paper"><img src="paper.png" alt="" height="150px" width="150px" class="scale"></div>
+                <div class=" box " id="scissor"><img src="scissor.jpg" alt="" height="150px" width="150px" class="scale"></div>
+            </div>
+        </div>
+        <div class="scoreArea">
+            <h3>won : 0 loss : 0 tai : 0</h3>
+        </div>
+    </div>
+    <script src="RockPaperScissor.js">
+            
+    </script>
+</body>
+
+</html>
